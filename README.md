@@ -1,6 +1,6 @@
 # The largest heading
 ## The second largest heading
-###### The smallest heading
+### The smallest heading
 
 **Жирный выделяется по 2 звездв**
 
@@ -17,4 +17,3 @@ _Курсив выделяется нижним подчеркиванием_
 
 ***а это очень выжный текст с 3 звездочками***
 
-##### header1
