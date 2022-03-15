@@ -1,15 +1,6 @@
-#header1#
-
-##header2
-
-###header3
-
-####header4
-
-#####header5
-
-######header6
-
+# The largest heading
+## The second largest heading
+###### The smallest heading
 
 **Жирный выделяется по 2 звездв**
 
