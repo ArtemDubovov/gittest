@@ -1,2 +1,2 @@
-test --- ok
+test --- reload master!
 first --- reload first
