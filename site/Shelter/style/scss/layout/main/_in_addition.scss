@@ -1,0 +1,134 @@
+.in_addition {
+    background-color: $color-light-l;
+    .in_addition-container {
+        display: flex;
+        padding: 58px 182px 100px 182px;
+        justify-content: center;
+        align-items: center;
+        .in_addition-img {
+            padding-top: 18px;
+            margin-right: 32px;
+        }
+        .in_addition-block {
+            :not(:first-child){
+                margin-top: 20px;
+            }
+            .in_addition-block-title {
+
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 45.5px;
+                color: $color-dark-l;
+                margin:19px 0px 0px 0px;
+                letter-spacing: 0.06em;
+            }
+            .in_addition-block-subtitle {
+                font-size: 15px;
+                line-height: 16.5px;
+                color: $color-dark-l;
+                letter-spacing: 0.06em;
+            }
+            .in_addition-block-link {
+
+                margin-top: 19px;
+                pointer-events: none;
+                display: inline-block;
+                position: relative;
+                background: $color-primary;
+                text-decoration: none;
+                color: $color-dark-l;
+                padding: 10px 15px 10px 60px;
+                border-radius: 9px;
+                font-size: 20px;
+                letter-spacing: 0.06em;
+                line-height: 115%;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 10px;
+                    left: 15px;
+                    background-image: url('./../assets/icons/in_addition/credit-card.png');
+                    background-size: 30px 23px;
+                    width: 30px;
+                    height: 23px;
+                }
+            }
+            .in_addition-block-info {
+                color: rgba(178, 178, 178, 1);
+                font-family: Arial, sans-serif;
+                font-style: italic;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1279px){
+    .in_addition {
+        .in_addition-container {
+            padding: 62px 182px 100px 182px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            .in_addition-img {
+                margin-top: 41px;
+                margin-right: 0px;
+            }
+            .in_addition-block {
+                max-width: 380px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                .in_addition-block-title {
+                    line-height: 45px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .in_addition {
+        .in_addition-container {
+            padding: 23px 20px 42px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            .in_addition-img {
+                max-width: 300px;
+                margin-top: 43px;
+                padding: 0 10px;
+                width: 100%;
+                height: auto;
+            }
+            .in_addition-block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .in_addition-block-title {
+                    line-height: 32px;
+                    font-size: 25px;
+                    text-align: center;
+                }
+                .in_addition-block-subtitle {
+                    margin-top: 24px;
+                    text-align: center;
+                    font-size: 15px;
+                    letter-spacing: 0px;
+                }
+                .in_addition-block-link {
+                    margin-top: 24px;
+                    padding: 13px 15px 12px 59px;
+                    text-align: center;
+                    font-size: 15px;
+                }
+                .in_addition-block-info  {
+                    text-align: justify;   
+                }
+            }
+        }
+    }
+}

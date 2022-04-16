@@ -1,0 +1,134 @@
+.our_pets{
+    background-color: $color-light-l;
+    padding: 56px 0 100px;
+    .our_pets-title{
+        color: $color-dark-l;
+        font-size: 35px;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        line-height: 130%;
+    }
+    .our_friends--carousel {
+        margin-top: 57px;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 30px 40px;
+        .carousel-card {
+            @extend %card;
+            color: $color-dark-l;
+            .carousel-card-name{
+                margin-top: 30px;
+            }
+            .carousel-card-button {
+                cursor: pointer;
+                @extend %button;
+                border: 2px solid $color-primary;
+                margin: 10px auto 30px;
+                letter-spacing: 1px;
+                background-color: $color-light-s;
+                border: 2px solid $color-primary;
+                font-size: 17px;
+            }
+        }
+    }
+    .carousel-buttons{
+        margin: 60px auto 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        :not(:first-child){
+            margin-left: 20px;
+        }
+        .carousel-button{
+            @extend %btn-menu;
+
+        }
+        .btn-number-page{
+            background-color: $color-primary;
+            border: 2px solid $color-primary;
+            cursor: default;
+        }
+        .carousel-button[disabled]{
+            border: 2px solid $color-dark-s;
+            cursor: default;
+        }
+        .carousel-button[active]{
+            border: 2px solid $color-primary;
+            cursor: pointer;
+            transition: 0.3s background-color, 0.3s border-color;
+            &:hover{
+                background-color: $color-primary-light;
+                border-color: $color-primary-light;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 768px){
+    .our_pets {
+        padding-bottom: 76px;
+        .container {
+            .our_friends--carousel {
+                margin-top: 28px;
+                padding: 0px 64px;
+                grid-gap: 28px 40px;
+                grid-template-columns: repeat(2, 1fr);
+                .carousel-card{
+                    margin: auto;
+                }
+                #freddie{
+                    display: none;
+                }
+                #scarlett{
+                    display: none;
+                }
+            }
+            .carousel-buttons{
+                margin-top: 39px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .our_pets {
+        padding-top: 23px;
+        padding-bottom: 42px;
+        .container {
+
+            .carousel-buttons{
+                margin-top: 40px;
+                :not(:first-child){
+                    margin-left: 10px;
+                }
+            }
+            .our_pets-title{
+                font-size: 25px;
+            }
+            .our_friends--carousel {
+                margin-top: 41px;
+                grid-gap: 29px 0px;
+                grid-template-columns: 1fr;
+                .carousel-card{
+                    margin: auto;
+                }
+                #freddie{
+                    display: none;
+                }
+                #scarlett{
+                    display: none;
+                }
+                #charly{
+                    display: none;
+                }
+                #sophia{
+                    display: none;
+                }
+                #timmy{
+                    display: none;
+                }
+            }
+        }
+    }
+}

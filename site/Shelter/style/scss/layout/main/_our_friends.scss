@@ -1,0 +1,159 @@
+.our_friends {
+    padding: 52px 0px 100px 0px;
+    background-color: rgba(246, 246, 246, 1);
+    .our_friends-title {
+        color: $color-dark-l;
+        font-size: 35px;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        line-height: 130%;
+    }
+    .our_friends--carousel {
+        margin-top: 60px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 0 90px;
+        transition: 0.3s all;
+        .carousel-card {
+            @extend %card;
+            .carousel-card-img {
+                width: 100%;
+                height: auto;
+            } 
+            .carousel-card-button {
+                @extend %button;
+                display: block;
+                cursor: pointer;
+                margin: 10px auto 30px;
+                letter-spacing: 1px;
+                background-color: $color-light-s;
+                border: 2px solid $color-primary;
+                font-size: 17px;
+                &:hover{
+                    background-color: $color-primary-light;
+                    border-color: $color-primary-light;
+                }
+            }
+        }
+        .card-hidden-left{
+            display: none;
+            position: absolute;
+            left: -200px;
+            opacity: 0;
+            width: 0px;
+        }
+        .card-hidden-right{
+            display: none;
+            position: absolute;
+            right: -200px;
+            opacity: 0;
+            width: 0px;
+        }
+        .carousel-arrow{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 2px solid $color-primary;
+            transition: 0.3s background-color, 0.3s border-color;
+            cursor: pointer;
+            &:hover{
+                background-color: $color-primary-light;
+                border-color: $color-primary-light;
+            }
+        }
+        .carousel-arrow-left {
+            transform: translate( 0%, -50%);
+            left: 0px;
+        }
+        .carousel-arrow-right {
+            right: 0px;
+            transform: rotate(180deg) translate( 0%, 50%);
+        }
+    }
+    .our_friends-button_wrap{
+        display: flex;
+        justify-content: center;
+    }
+    .our_friends-button{
+        display: block;
+        text-align: center;
+        @extend %button;
+        border: 2px solid $color-primary;
+        margin: 58px auto 0px;
+        background-color:$color-primary;
+        transition: 0.3s background-color, 0.3s border-color;
+        letter-spacing: 1px;
+        &:hover{
+            background-color: $color-primary-light;
+            border-color: $color-primary-light;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1279px){
+    #card-woody{              // карточка
+        display: none;
+    }
+    .our_friends {
+        .our_friends--carousel {
+            max-width: 730px;
+            margin: 57px auto;
+            justify-content: center;
+            padding: 0 64px;
+            gap: 0px 40px;
+        }
+        .our_friends-button_wrap{
+            .our_friends-button{
+                margin-top: 3px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    #card-jennifer{
+        display: none;
+    }
+    .our_friends {
+        padding: 22px 0px 41px;
+        .our_friends-title {
+            font-size: 25px;
+            margin-bottom: 0px;
+        }
+        .our_friends--carousel {
+            max-width: 300px;
+            margin-top: 41px;
+            justify-content: center;
+            padding: 0 5px;
+            .carousel-card{
+                .carousel-card-name{
+                    margin-top: 30px;
+                }
+            }
+            .carousel-arrow-left {
+                transform: translate( 0%, 0%);
+                top: 104%;
+                left: 58px;
+            }
+            .carousel-arrow-right {
+                top: 104%;
+                right: 58px;
+                transform: rotate(180deg) translate( 0%, 0%);
+            }
+        }
+        .our_friends-button_wrap{
+            .our_friends-button{
+                margin-top: 55px;
+            }
+        }
+    }
+
+}
